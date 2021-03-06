@@ -1,10 +1,10 @@
-# Script name:					Windows10InitialSetup.ps1
-# Author:								github@remotenode.org
-# Version:							0.01
-# Date last modified:		2020/07/21
-# Description: 					Windows 10 Setup script
+# Script name:	            Windows10InitialSetup.ps1
+# Author:                   github@remotenode.org
+# Version:                  0.02
+# Date last modified:       2021/03/05
+# Description:              Windows 10 Setup script
 # 
-# Changelog:						2020/07/21 - None
+# Changelog:                2021/03/05 - Updating some variables.
 #
 
 
@@ -27,7 +27,7 @@ $ProductKey=""
 Set-WindowsProductKey -ProductKey $ProductKey
 
 # TimeZone settings
-Set-TimeZone -Name "Pacific Standard Time"
+Set-TimeZone -Name $TimeZone
 net start w32time
 w32tm /config /manualpeerlist: time.windows.com /syncfromflags:manual /reliable:yes /update
 
