@@ -50,6 +50,15 @@ Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' 
 Enable-NetFirewallRule -DisplayGroup 'Remote Desktop'
 
 
+# Remove the random startup backgrounds from the login screen.
+DISM /online /enable-feature /featurename:Client-DeviceLockdown /featurename:Client-EmbeddedLogon 
+
+Reg add "HKLM\SOFTWARE\Microsoft\Windows Embedded\EmbeddedLogon" /v  BrandingNeutral  /t REG_DWORD /d 1 
+Reg add "HKLM\SOFTWARE\Microsoft\Windows Embedded\EmbeddedLogon" /v  HideAutoLogonUI  /t REG_DWORD /d 0 
+Reg add "HKLM\SOFTWARE\Microsoft\Windows Embedded\EmbeddedLogon" /v  HideFirstLogonAnimation  /t REG_DWORD /d 0 
+Reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI" /v AnimationDisabled /t REG_DWORD /d 1 
+Reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization"  /v  NoLockScreen /t REG_DWORD /d 1 
+Reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v  UIVerbosityLevel  /t REG_DWORD /d 1
 
 # Uninstall Windows Bloatware
 
