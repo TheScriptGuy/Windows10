@@ -4,7 +4,8 @@
 # Date last modified:       2021/03/30
 # Description:              Windows 10 Setup script
 # 
-# Changelog:                2021/03/05 - Updating some variables.
+# Changelog:                2021/03/30 - Adding removal of live tiles
+#                           2021/03/05 - Updating some variables.
 #
 
 
