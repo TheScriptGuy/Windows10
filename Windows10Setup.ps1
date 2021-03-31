@@ -1,7 +1,7 @@
 # Script name:	            Windows10InitialSetup.ps1
-# Author:                   github@remotenode.org
-# Version:                  0.02
-# Date last modified:       2021/03/05
+# Author:                   github at remotenode dot org
+# Version:                  0.03
+# Date last modified:       2021/03/30
 # Description:              Windows 10 Setup script
 # 
 # Changelog:                2021/03/05 - Updating some variables.
